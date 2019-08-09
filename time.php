@@ -3,7 +3,7 @@ echo date('l F jS, Y - g:ia',time());
 try {
 
 $pdo = new PDO(
-    'sqlite::memory:',
+    'sqlite:./mydb.sq3',
     null,
     null,
     array(PDO::ATTR_PERSISTENT => true)
