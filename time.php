@@ -6,7 +6,7 @@ $pdo = new PDO(
     'sqlite:./mydb.sq3',
     null,
     null,
-    array(PDO::ATTR_PERSISTENT => true)
+    [PDO::ATTR_PERSISTENT=> true]
 );
 
     $pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
