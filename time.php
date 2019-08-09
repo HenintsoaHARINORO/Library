@@ -18,11 +18,12 @@ catch(exception $e)
     die('Erreur:' .$e->getMessage());
 }
 
-if(ISSET($_POST['submit']))
+if(ISSET($_POST['submit'])){
     $nom=$_POST['name'];
     $author=$_POST['bookName'];
     $req=$pdo->prepare('INSERT INTO student1(nom,Author)  VALUES(:nom,:Author)');
-    $req->execute(["nom"=>$nom,"Author"=>$author])
+    $req->execute(["nom"=>$nom,"Author"=>$author]);
+}
 ?>
 
 
