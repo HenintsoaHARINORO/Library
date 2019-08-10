@@ -17,7 +17,7 @@ try {
     header("time.php");
 }
 
-if (ISSET($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = $_POST['name'];
     $author = $_POST['bookName'];
     $req = $pdo->prepare('INSERT INTO student(nom,Author)  VALUES(:nom,:Author)');
